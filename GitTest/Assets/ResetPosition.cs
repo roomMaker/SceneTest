@@ -5,12 +5,10 @@ using UnityEngine;
 public class ResetPosition : MonoBehaviour
 {
     public GameObject SpawnPoint;
+    public GameObject Seonmun;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter()
     {
-        if(other.tag == "Seonmun")
-        {
-            gameObject.transform.position = SpawnPoint.transform.position;
-        }
+        Seonmun.transform.position = SpawnPoint.transform.position;
     }
 }
